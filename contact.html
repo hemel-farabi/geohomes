@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | GEO HOME LTD</title>
+  <meta name="description" content="Contact GEO HOME LTD for property enquiries, project information, land partnerships and real estate solutions in Dhaka, Bangladesh.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--primary:#6d3129;--primary-dark:#4f211c;--secondary:#8aa36d;--dark:#2d2f34;--text:#6d6d6d;--light:#f7f6f3;--white:#fff;--border:#e7e2dc}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:95px}
+    body{background:#fff;color:var(--dark);font-family:Inter,sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden}
+    img{max-width:100%;display:block}a{text-decoration:none;transition:all .3s ease}button,input,textarea,select{font:inherit}
+    .container{width:90%;max-width:1200px;margin:auto}
+    .header{position:fixed;top:0;left:0;width:100%;height:85px;background:rgba(255,255,255,.98);box-shadow:0 2px 20px rgba(0,0,0,.07);z-index:1000}
+    .header-inner{height:85px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo-area{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .logo-area img{width:55px;height:55px;object-fit:contain}
+    .brand-text{display:flex;flex-direction:column;line-height:1.2}
+    .company-name{font-family:"DM Serif Display",serif;color:var(--primary);font-size:21px;letter-spacing:.5px}
+    .tagline-mini{font-size:9px;color:#777;letter-spacing:.5px;margin-top:5px}
+    .navigation{display:flex;align-items:center;gap:22px}
+    .navigation a{color:var(--dark);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+    .navigation a:hover,.navigation a.active{color:var(--primary)}
+    .header-actions{display:flex;align-items:center;gap:8px}
+    .header-social{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px}
+    .facebook-icon{background:#1877f2}.whatsapp-icon{background:#25d366}
+    .header-social:hover{transform:translateY(-2px);color:#fff;filter:brightness(.92)}
+    .mobile-toggle{display:none;font-size:23px;color:var(--primary);cursor:pointer}
+    .page-hero{position:relative;margin-top:85px;min-height:390px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(50,24,20,.92),rgba(65,28,23,.72),rgba(65,28,23,.46)),url("img/contact.jpg") center/cover no-repeat}
+    .page-hero-content{max-width:760px;padding:70px 0 100px}
+    .eyebrow{color:#d6c09c;text-transform:uppercase;letter-spacing:4px;font-size:12px;font-weight:800;margin-bottom:16px}
+    .page-hero h1{font-family:"DM Serif Display",serif;font-size:clamp(44px,6vw,70px);font-weight:400;line-height:1.08;margin-bottom:18px}
+    .page-hero p{max-width:670px;color:rgba(255,255,255,.9);font-size:16px}
+    .page-hero strong{color:#e4cba4;font-weight:700}
+    .breadcrumb{position:absolute;left:0;bottom:0;width:100%;padding:15px 0;background:rgba(0,0,0,.2)}
+    .breadcrumb-inner{display:flex;align-items:center;gap:12px;font-size:13px}
+    .breadcrumb a{color:#fff}.breadcrumb a:hover{color:#d6c09c}.breadcrumb i{font-size:10px;color:#d6c09c}.breadcrumb span{color:rgba(255,255,255,.75)}
+    .section{padding:85px 0}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+    .section-label{display:block;color:var(--primary);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:3px;margin-bottom:12px}
+    h2,h3{font-family:"DM Serif Display",serif;font-weight:400}
+    .contact-info h2,.location-content h2{font-size:clamp(34px,4vw,45px);line-height:1.2;margin-bottom:18px}
+    .contact-info h2 em{color:var(--primary);font-style:normal}
+    .intro,.location-content>p{color:var(--text);font-size:14px;line-height:1.9;margin-bottom:28px}
+    .contact-details{display:flex;flex-direction:column;gap:14px}
+    .contact-card{display:flex;align-items:center;gap:16px;padding:17px;border:1px solid var(--border);background:#fff;transition:.3s}
+    .contact-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.06)}
+    .contact-icon{width:48px;height:48px;flex-shrink:0;background:#f2eae7;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:19px}
+    .contact-card h3{font-size:19px;margin-bottom:2px}
+    .contact-card p,.contact-card a{color:var(--text);font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+    .contact-card a:hover{color:var(--primary)}
+    .contact-form-box{background:var(--light);padding:40px;border:1px solid var(--border)}
+    .contact-form-box h3{font-size:32px;margin-bottom:6px}
+    .contact-form-box>p{color:var(--text);font-size:13px;margin-bottom:25px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-group{margin-bottom:17px}
+    .form-group label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}
+    .form-group input,.form-group textarea,.form-group select{width:100%;border:1px solid var(--border);background:#fff;color:var(--dark);padding:13px 14px;font-size:13px;outline:none}
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--primary)}
+    .form-group textarea{min-height:130px;resize:vertical}
+    .submit-btn,.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;background:var(--primary);color:#fff;padding:14px 24px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;cursor:pointer}
+    .submit-btn:hover,.primary-btn:hover{background:var(--primary-dark);color:#fff;transform:translateY(-2px)}
+    .form-note{font-size:11px;color:#777;margin-top:14px}
+    .facilities{background:var(--light)}
+    .section-heading{text-align:center;max-width:760px;margin:0 auto 42px}
+    .section-heading .section-label{margin-bottom:10px}
+    .section-heading h2{font-size:clamp(33px,4vw,44px);line-height:1.2;margin-bottom:14px}
+    .section-heading p{color:var(--text);font-size:14px}
+    .facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .facility-card{background:#fff;border:1px solid var(--border);padding:30px 22px;min-height:210px;transition:.3s}
+    .facility-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,.06)}
+    .facility-icon{width:55px;height:55px;background:#f2eae7;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:17px}
+    .facility-card h3{font-size:21px;margin-bottom:8px}.facility-card p{color:var(--text);font-size:13px;line-height:1.8}
+    .social-section{padding:65px 0;background:#fff}
+    .social-wrap{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 32px;border:1px solid var(--border)}
+    .social-wrap h2{font-size:29px;margin-bottom:5px}.social-wrap p{font-size:13px;color:var(--text)}
+    .social-links{display:flex;flex-wrap:wrap;gap:10px}
+    .social-links a{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px}
+    .social-links a:hover{transform:translateY(-3px);filter:brightness(.9)}
+    .s-facebook{background:#1877f2}.s-instagram{background:#c13584}.s-linkedin{background:#0a66c2}.s-youtube{background:#f00}.s-tiktok{background:#111}.s-whatsapp{background:#25d366}.s-x{background:#111}
+    .location-section{background:#f7f6f3}
+    .location-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:stretch}
+    .location-content{padding:15px 0}
+    .location-content .address-line{font-weight:600;color:var(--dark)}
+    .location-list{list-style:none;margin:22px 0 28px;padding:0}
+    .location-list li{display:flex;align-items:flex-start;gap:11px;color:var(--dark);font-size:13px;margin-bottom:12px}
+    .location-list i{color:var(--secondary);margin-top:5px}
+    .map-box{min-height:440px;border:1px solid var(--border);background:#e9e5df;overflow:hidden}
+    .map-box iframe{display:block;width:100%;height:100%;min-height:440px;border:0}
+    .cta-section{background:var(--primary);padding:65px 0;color:#fff}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .cta-content span{color:#e0c2b8;font-size:11px;text-transform:uppercase;letter-spacing:3px;font-weight:700}
+    .cta-content h2{font-size:clamp(30px,4vw,42px);margin-top:8px}
+    .cta-content p{color:rgba(255,255,255,.82);margin-top:7px;font-size:14px}
+    .cta-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--primary);padding:14px 24px;font-size:12px;font-weight:800;text-transform:uppercase;white-space:nowrap}
+    .cta-btn:hover{background:#eee;color:var(--primary-dark)}
+    footer{background:#252223;color:rgba(255,255,255,.72);padding-top:65px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:35px;padding-bottom:45px}
+    .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+    .footer-logo img{width:50px;height:50px;object-fit:contain}.footer-logo span{font-family:"DM Serif Display",serif;color:#fff;font-size:20px}
+    .footer-about>p{max-width:340px;font-size:12px;line-height:1.9}
+    .footer-column h3{color:#fff;font-size:21px;margin-bottom:17px}
+    .footer-column p{font-size:12px;margin-bottom:10px;overflow-wrap:anywhere}
+    .footer-column p i{color:#b9a276;width:20px}
+    .footer-links{list-style:none;padding:0}.footer-links li{margin-bottom:8px}
+    .footer-links a{color:rgba(255,255,255,.68);font-size:12px}.footer-links a:hover{color:#fff;padding-left:4px}
+    .footer-social{display:flex;gap:8px;margin-top:18px}.footer-social a{width:35px;height:35px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.18);color:#fff}
+    .footer-social a:hover{background:var(--primary);border-color:var(--primary)}
+    .copyright{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;display:flex;justify-content:space-between;gap:18px;font-size:11px}
+    .copyright a{color:#fff}
+    .scroll-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;display:none;align-items:center;justify-content:center;background:var(--primary);color:#fff;z-index:900;cursor:pointer;border:0}
+    .scroll-top.show{display:flex}
+    @media(max-width:1100px){.navigation{gap:13px}.navigation a{font-size:10px}.header-actions{gap:5px}.company-name{font-size:19px}}
+    @media(max-width:992px){.navigation{position:fixed;top:85px;left:0;width:100%;background:#fff;display:none;flex-direction:column;align-items:flex-start;padding:24px 5%;gap:17px;box-shadow:0 12px 25px rgba(0,0,0,.08)}.navigation.show{display:flex}.mobile-toggle{display:block}.contact-grid,.location-grid{grid-template-columns:1fr;gap:40px}.facility-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}.cta-inner,.social-wrap{align-items:flex-start;flex-direction:column}}
+    @media(max-width:768px){.header,.header-inner{height:75px}.navigation{top:75px}.page-hero{margin-top:75px;min-height:360px}.logo-area img{width:44px;height:44px}.company-name{font-size:17px}.tagline-mini{font-size:8px}.header-social{width:32px;height:32px}.section{padding:65px 0}.contact-form-box{padding:28px 22px}.form-row{grid-template-columns:1fr;gap:0}.facility-grid{grid-template-columns:1fr 1fr}.footer-grid{gap:30px}.map-box,.map-box iframe{min-height:360px}.copyright{flex-direction:column;text-align:center;gap:7px}}
+    @media(max-width:480px){.container{width:92%}.header-inner{gap:8px}.logo-area{gap:7px}.logo-area img{width:38px;height:38px}.company-name{font-size:15px}.tagline-mini{font-size:7px}.header-actions{gap:5px}.header-social{width:29px;height:29px;font-size:12px}.page-hero h1{font-size:43px}.page-hero p{font-size:14px}.eyebrow{font-size:10px;letter-spacing:2px}.contact-form-box h3{font-size:28px}.facility-grid{grid-template-columns:1fr}.social-wrap{padding:24px 20px}.map-box,.map-box iframe{min-height:320px}.cta-content h2{font-size:30px}.footer-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header-inner">
+
+
+                <!-- Logo -->
+
+                <a href="index.html" class="logo-area">
+
+                    <img src="img/logo.png" alt="GEO HOME LTD">
+
+                    <span class="company-name">
+                        GEO HOME LTD
+                    </span>
+
+                </a>
+
+
+                <!-- Navigation -->
+
+                <nav class="navigation" id="navigation">
+
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="for-sale.html">
+                        Ongoing
+                    </a>
+
+                    <a href="handed_over.html">
+                        Handed Over
+                    </a>
+
+                    <a href="upcoming.html">
+                        Upcoming
+                    </a>
+
+                    <a href="land_needed.html">
+                        Land Needed
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <!-- Social Icons -->
+
+                <div class="header-actions">
+
+                    <!-- Replace # with your official Facebook page URL -->
+
+                    <a href="#"
+                       class="header-social facebook-icon"
+                       target="_blank"
+                       aria-label="Facebook">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <!-- WhatsApp -->
+
+                    <a href="https://wa.me/8801711275021"
+                       class="header-social whatsapp-icon"
+                       target="_blank"
+                       aria-label="WhatsApp">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <!-- Mobile Menu -->
+
+                    <div class="mobile-toggle" id="mobileToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="eyebrow">GEO HOME LTD · YOUR DREAMS, OUR RESPONSIBILITY</div>
+        <h1>We’re Here<br>To Help You.</h1>
+        <p>Talk to our team about your next home, property investment, or land development opportunity. <strong>Your dreams, our responsibility.</strong></p>
+      </div>
+    </div>
+    <div class="breadcrumb"><div class="container breadcrumb-inner"><a href="index.html">Home</a><i class="fa-solid fa-angle-right"></i><span>Contact Us</span></div></div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Get in touch</span>
+          <h2>Let’s Start a <em>Conversation</em></h2>
+          <p class="intro">Contact GEO HOME LTD for apartment sales, residential project information, land partnerships, and general property enquiries. Our head office and corporate office are at the same location.</p>
+          <div class="contact-details">
+            <div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-building"></i></div><div><h3>Head Office &amp; Corporate Office</h3><p>14/6, Lake Circus, Kalabagan, Dhaka-1205, Bangladesh</p></div></div>
+            <div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div><div><h3>Sales Hotline</h3><p><a href="tel:+8801711275021">+880 1711-275021</a></p></div></div>
+            <div class="contact-card"><div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div><div><h3>WhatsApp</h3><p><a href="https://wa.me/8801711275021" target="_blank" rel="noopener">Chat with our sales team</a></p></div></div>
+            <div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><h3>Email</h3><p><a href="mailto:sales@geohomesltd.com">sales@geohomesltd.com</a></p></div></div>
+            <div class="contact-card"><div class="contact-icon"><i class="fa-regular fa-clock"></i></div><div><h3>Office Hours</h3><p>Every day, 9:00 AM – 6:00 PM</p></div></div>
+            <div class="contact-card"><div class="contact-icon"><i class="fa-solid fa-square-parking"></i></div><div><h3>Parking Access</h3><p>Parking access available for visitors.</p></div></div>
+          </div>
+        </div>
+
+        <div class="contact-form-box">
+          <h3>Send Us a Message</h3>
+          <p>Share your details and enquiry. Your email app will open with the message prepared for our sales team.</p>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Full Name *</label><input id="name" name="name" type="text" placeholder="Enter your full name" required></div>
+              <div class="form-group"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="Enter your email"></div>
+              <div class="form-group"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="How can we help?"></div>
+            </div>
+            <div class="form-group"><label for="interest">Interested In</label><select id="interest" name="interest"><option value="">Select an option</option><option>Apartment / Property Purchase</option><option>Available Projects</option><option>Upcoming Projects</option><option>Land Partnership / Joint Venture</option><option>Property Consultation</option><option>Other Enquiry</option></select></div>
+            <div class="form-group"><label for="message">Your Message *</label><textarea id="message" name="message" placeholder="Write your message here..." required></textarea></div>
+            <button class="submit-btn" type="submit">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="form-note">This form prepares an email addressed to sales@geohomesltd.com; it does not submit data to a server.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section facilities">
+      <div class="container">
+        <div class="section-heading"><span class="section-label">Visit our office</span><h2>We’re Ready to Welcome You</h2><p>Plan your visit to GEO HOME LTD. Our team can help with project details, property enquiries, and development opportunities.</p></div>
+        <div class="facility-grid">
+          <article class="facility-card"><div class="facility-icon"><i class="fa-regular fa-clock"></i></div><h3>Office Hours</h3><p>Our office hours are 9:00 AM to 6:00 PM.</p></article>
+          <article class="facility-card"><div class="facility-icon"><i class="fa-solid fa-square-parking"></i></div><h3>Parking Access</h3><p>Visitor parking access is available at the office.</p></article>
+          <article class="facility-card"><div class="facility-icon"><i class="fa-solid fa-house"></i></div><h3>Property Sales</h3><p>Discuss apartment availability and project details with our sales team.</p></article>
+          <article class="facility-card"><div class="facility-icon"><i class="fa-solid fa-handshake"></i></div><h3>Land Partnerships</h3><p>Contact us to discuss land development and partnership opportunities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div class="container social-wrap">
+        <div><h2>Follow GEO HOME LTD</h2><p>Connect with us on social media for company news and project updates.</p></div>
+        <div class="social-links" aria-label="Social media links">
+          <!-- Replace # with GEO HOME LTD's official profile URLs when available. -->
+          <a class="s-facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="s-instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="s-linkedin" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="s-youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="s-tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a class="s-x" href="#" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a class="s-whatsapp" href="https://wa.me/8801711275021" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section">
+      <div class="container location-grid">
+        <div class="location-content">
+          <span class="section-label">Find our office</span>
+          <h2>Visit GEO HOME LTD</h2>
+          <p class="address-line"><i class="fa-solid fa-location-dot"></i> &nbsp;14/6, Lake Circus, Kalabagan, Dhaka-1205, Bangladesh</p>
+          <p>Our head office and corporate office operate from the same address. Use the map to plan your visit.</p>
+          <ul class="location-list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Head Office and Corporate Office at one location</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Office hours: 9:00 AM – 6:00 PM</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Parking access available for visitors</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Call the sales hotline before your visit if needed</span></li>
+          </ul>
+          <a class="primary-btn" href="https://www.google.com/maps?q=23.751194478669788,90.38075617533595" target="_blank" rel="noopener">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3651.893007721532!2d90.38075617533595!3d23.751194478669788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDQ1JzA0LjMiTiA5MMKwMjInNjAuMCJF!5e0!3m2!1sen!2sbd!4v1792343313417!5m2!1sen!2sbd" title="GEO HOME LTD office location map" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div class="cta-content"><span>Your Dreams, Our Responsibility</span><h2>Let’s Find Your Future Home</h2><p>Contact our sales team to learn more about GEO HOME LTD projects.</p></div>
+        <a href="for-sale.html" class="cta-btn">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo"><img src="img/logo.png" alt="GEO HOME LTD logo"><span>GEO HOME LTD</span></div>
+          <p>Your Dreams, Our Responsibility. GEO HOME LTD is committed to helping clients explore residential property and real estate development opportunities.</p>
+          <div class="footer-social">
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/8801711275021" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column"><h3>Contact</h3>
+          <p><i class="fa-solid fa-location-dot"></i> 14/6, Lake Circus, Kalabagan, Dhaka-1205</p>
+          <p><i class="fa-solid fa-phone"></i> <a href="tel:+8801711275021">+880 1711-275021</a></p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:sales@geohomesltd.com">sales@geohomesltd.com</a></p>
+          <p><i class="fa-regular fa-clock"></i> 9:00 AM – 6:00 PM</p>
+        </div>
+        <div class="footer-column"><h3>Useful Pages</h3><ul class="footer-links">
+          <li><a href="about.html">About Us</a></li><li><a href="for-sale.html">Projects for Sale</a></li><li><a href="handed_over.html">Handed Over Projects</a></li><li><a href="upcoming.html">Upcoming Projects</a></li><li><a href="land_needed.html">Land Needed</a></li><li><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+        <div class="footer-column"><h3>Our Enquiries</h3><ul class="footer-links">
+          <li><a href="for-sale.html">Apartment Sales</a></li><li><a href="upcoming.html">Project Information</a></li><li><a href="land_needed.html">Land Partnership</a></li><li><a href="mailto:sales@geohomesltd.com">Email Sales Team</a></li><li><a href="https://wa.me/8801711275021" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        </ul></div>
+      </div>
+      <div class="copyright"><div>© 2026 GEO HOME LTD. All Rights Reserved.</div><div>Designed &amp; Developed by <a href="https://safetaka.com" target="_blank" rel="noopener">Safetaka.com</a></div></div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navigation = document.getElementById("navigation");
+    mobileToggle.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("show");
+      mobileToggle.setAttribute("aria-expanded", String(isOpen));
+      const icon = mobileToggle.querySelector("i");
+      icon.classList.toggle("fa-bars", !isOpen);
+      icon.classList.toggle("fa-xmark", isOpen);
+    });
+    document.querySelectorAll(".navigation a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("show");
+        mobileToggle.setAttribute("aria-expanded", "false");
+        const icon = mobileToggle.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+      });
+    });
+    const scrollTop = document.getElementById("scrollTop");
+    window.addEventListener("scroll", function () {
+      scrollTop.classList.toggle("show", window.scrollY > 500);
+    });
+    scrollTop.addEventListener("click", function () {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    });
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const subject = data.get("subject") || "Website enquiry - GEO HOME LTD";
+      const body = [
+        "Name: " + data.get("name"),
+        "Phone: " + data.get("phone"),
+        "Email: " + (data.get("email") || "Not provided"),
+        "Interested In: " + (data.get("interest") || "Not specified"),
+        "",
+        "Message:",
+        data.get("message")
+      ].join("\\n");
+      window.location.href = "mailto:sales@geohomesltd.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,3131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Geo Homes Limited</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <meta name="description"
+          content="Learn more about Geo Homes Limited, formerly Geo Properties Limited, its journey, projects, leadership and property development activities in Dhaka.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: #2d2f34;
+            font-family: "Inter", sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        :root {
+
+            --primary: #6d3129;
+
+            --primary-dark: #4f211c;
+
+            --secondary: #8aa36d;
+
+            --secondary-dark: #6f8755;
+
+            --dark: #2d2f34;
+
+            --text: #6d6d6d;
+
+            --light: #f7f6f3;
+
+            --white: #ffffff;
+
+            --border: #e7e2dc;
+
+            --cream: #f4eee9;
+
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        .padding {
+            padding: 95px 0;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 85px;
+
+            background: rgba(255,255,255,0.97);
+
+            box-shadow:
+                0 2px 25px rgba(0,0,0,0.07);
+
+            z-index: 9999;
+        }
+
+
+        .header-inner {
+
+            height: 85px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo-area {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            flex-shrink: 0;
+        }
+
+
+        .logo-area img {
+
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: contain;
+        }
+
+
+        .company-name {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: var(--primary);
+
+            font-size: 21px;
+
+            letter-spacing: .5px;
+        }
+
+
+        /* Navigation */
+
+        .navigation {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+
+        .navigation a {
+
+            color: var(--dark);
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: .3px;
+        }
+
+
+        .navigation a:hover,
+
+        .navigation a.active {
+
+            color: var(--primary);
+        }
+
+
+        /* Social */
+
+        .header-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-left: 20px;
+        }
+
+
+        .header-social {
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #ffffff;
+
+            font-size: 15px;
+        }
+
+
+        .facebook-icon {
+
+            background: #1877f2;
+        }
+
+
+        .facebook-icon:hover {
+
+            background: #0d5dcc;
+
+            color: #fff;
+
+            transform: translateY(-2px);
+        }
+
+
+        .whatsapp-icon {
+
+            background: #25d366;
+        }
+
+
+        .whatsapp-icon:hover {
+
+            background: #1da851;
+
+            color: #fff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* Mobile menu */
+
+        .mobile-toggle {
+
+            display: none;
+
+            font-size: 24px;
+
+            color: var(--primary);
+
+            cursor: pointer;
+
+            margin-left: 8px;
+        }
+
+
+
+        /* =========================================================
+           PAGE HERO
+        ========================================================= */
+
+        .page-hero {
+
+            height: 470px;
+
+            margin-top: 85px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(63, 27, 22, .82),
+                    rgba(63, 27, 22, .55),
+                    rgba(63, 27, 22, .25)
+                ),
+                url("img/bg.jpeg")
+                center center / cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .page-hero-content {
+
+            color: #fff;
+
+            max-width: 720px;
+        }
+
+
+        .page-hero-small {
+
+            color: #d8bd98;
+
+            text-transform: uppercase;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .page-hero h1 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: clamp(48px, 6vw, 72px);
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+
+        .page-hero p {
+
+            max-width: 620px;
+
+            color: rgba(255,255,255,.85);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        .breadcrumb {
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 100%;
+
+            background: rgba(0,0,0,.25);
+
+            padding: 14px 0;
+        }
+
+
+        .breadcrumb-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: rgba(255,255,255,.7);
+
+            font-size: 12px;
+        }
+
+
+        .breadcrumb a {
+
+            color: #fff;
+        }
+
+
+        .breadcrumb a:hover {
+
+            color: #d8bd98;
+        }
+
+
+        /* =========================================================
+           SECTION TITLE
+        ========================================================= */
+
+        .section-heading {
+
+            max-width: 780px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .section-heading span {
+
+            display: block;
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: var(--dark);
+
+            font-size: 44px;
+
+            font-weight: 400;
+
+            line-height: 1.2;
+
+            margin-bottom: 16px;
+        }
+
+
+        .section-heading p {
+
+            color: var(--text);
+
+            max-width: 690px;
+
+            margin: auto;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* =========================================================
+           ABOUT INTRO
+        ========================================================= */
+
+        .about-intro {
+
+            background: #fff;
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 75px;
+
+            align-items: center;
+        }
+
+
+        .about-image-wrap {
+
+            position: relative;
+
+            padding: 0 25px 25px 0;
+        }
+
+
+        .about-image {
+
+            width: 100%;
+
+            height: 570px;
+
+            object-fit: cover;
+        }
+
+
+        .about-image-wrap::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 75%;
+
+            height: 75%;
+
+            left: 0;
+
+            bottom: 0;
+
+            border: 10px solid var(--secondary);
+
+            z-index: -1;
+        }
+
+
+        .experience-box {
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 55px;
+
+            background: var(--primary);
+
+            color: #fff;
+
+            padding: 24px 30px;
+
+            min-width: 175px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.15);
+        }
+
+
+        .experience-box strong {
+
+            display: block;
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 42px;
+
+            font-weight: 400;
+
+            line-height: 1;
+        }
+
+
+        .experience-box span {
+
+            display: block;
+
+            margin-top: 8px;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: rgba(255,255,255,.8);
+        }
+
+
+        .about-content .eyebrow {
+
+            display: block;
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .about-content h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: var(--dark);
+
+            font-size: 45px;
+
+            font-weight: 400;
+
+            line-height: 1.2;
+
+            margin-bottom: 23px;
+        }
+
+
+        .about-content h2 em {
+
+            color: var(--primary);
+
+            font-style: normal;
+        }
+
+
+        .about-content p {
+
+            color: var(--text);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 17px;
+        }
+
+
+        .about-checks {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 13px;
+
+            margin: 27px 0 32px;
+        }
+
+
+        .check-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: var(--dark);
+        }
+
+
+        .check-item i {
+
+            color: var(--secondary);
+
+            font-size: 17px;
+        }
+
+
+        .default-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 27px;
+
+            background: var(--primary);
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: .6px;
+        }
+
+
+        .default-btn:hover {
+
+            background: var(--primary-dark);
+
+            color: #fff;
+
+            transform: translateY(-2px);
+        }
+
+
+
+        /* =========================================================
+           COMPANY STORY
+        ========================================================= */
+
+        .story-section {
+
+            background: var(--light);
+        }
+
+
+        .story-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .story-content {
+
+            padding-right: 15px;
+        }
+
+
+        .story-content .eyebrow {
+
+            display: block;
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .story-content h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+            font-weight: 400;
+
+            color: var(--dark);
+
+            margin-bottom: 22px;
+        }
+
+
+        .story-content p {
+
+            color: var(--text);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 17px;
+        }
+
+
+        .story-image {
+
+            position: relative;
+
+            height: 500px;
+
+            overflow: hidden;
+        }
+
+
+        .story-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .story-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 20px;
+
+            border: 1px solid rgba(255,255,255,.7);
+
+            pointer-events: none;
+        }
+
+
+
+        /* =========================================================
+           VISION MISSION
+        ========================================================= */
+
+        .vision-section {
+
+            background: #fff;
+        }
+
+
+        .vision-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .vision-card {
+
+            position: relative;
+
+            min-height: 310px;
+
+            padding: 45px;
+
+            overflow: hidden;
+
+            color: #fff;
+
+            background: var(--primary);
+        }
+
+
+        .vision-card.mission {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7e9a62,
+                    #607c48
+                );
+        }
+
+
+        .vision-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            right: -60px;
+
+            bottom: -60px;
+
+            width: 190px;
+
+            height: 190px;
+
+            border: 35px solid rgba(255,255,255,.08);
+
+            border-radius: 50%;
+        }
+
+
+        .vision-icon {
+
+            width: 62px;
+
+            height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.4);
+
+            font-size: 23px;
+
+            margin-bottom: 24px;
+        }
+
+
+        .vision-card h3 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 31px;
+
+            font-weight: 400;
+
+            margin-bottom: 13px;
+        }
+
+
+        .vision-card p {
+
+            max-width: 510px;
+
+            color: rgba(255,255,255,.84);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+
+        /* =========================================================
+           CORE VALUES
+        ========================================================= */
+
+        .values-section {
+
+            background: var(--light);
+        }
+
+
+        .values-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .value-card {
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            transition: all .35s ease;
+        }
+
+
+        .value-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.08);
+
+            border-color:
+                rgba(109,49,41,.2);
+        }
+
+
+        .value-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            border-radius: 50%;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #f2eae7;
+
+            color: var(--primary);
+
+            font-size: 24px;
+
+            transition: all .35s ease;
+        }
+
+
+        .value-card:hover .value-icon {
+
+            background: var(--primary);
+
+            color: #fff;
+        }
+
+
+        .value-card h3 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: var(--dark);
+
+            font-size: 23px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+
+        .value-card p {
+
+            color: var(--text);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats-section {
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(77,31,25,.95),
+                    rgba(109,49,41,.94)
+                ),
+                url("img/stats-bg.jpg")
+                center / cover;
+        }
+
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            border: 1px solid rgba(255,255,255,.15);
+        }
+
+
+        .stat-item {
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            border-right:
+                1px solid rgba(255,255,255,.15);
+        }
+
+
+        .stat-item:last-child {
+
+            border-right: none;
+        }
+
+
+        .stat-number {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: #fff;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            margin-bottom: 10px;
+        }
+
+
+        .stat-title {
+
+            color: #d8bd98;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .stats-note {
+
+            text-align: center;
+
+            color: rgba(255,255,255,.65);
+
+            font-size: 11px;
+
+            margin-top: 20px;
+        }
+
+
+
+        /* =========================================================
+           WHY GEO HOME
+        ========================================================= */
+
+        .why-section {
+
+            background: #fff;
+        }
+
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .why-image {
+
+            height: 540px;
+
+            position: relative;
+        }
+
+
+        .why-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .why-image-badge {
+
+            position: absolute;
+
+            left: 25px;
+
+            bottom: 25px;
+
+            background: var(--secondary);
+
+            color: #fff;
+
+            padding: 17px 22px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        .why-content .eyebrow {
+
+            color: var(--primary);
+
+            display: block;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .why-content h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: var(--dark);
+
+            font-size: 43px;
+
+            font-weight: 400;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+
+        .why-content > p {
+
+            color: var(--text);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 27px;
+        }
+
+
+        .reason-list {
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .reason {
+
+            display: flex;
+
+            gap: 17px;
+
+            padding: 19px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .reason-number {
+
+            flex-shrink: 0;
+
+            width: 35px;
+
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--cream);
+
+            color: var(--primary);
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .reason h4 {
+
+            color: var(--dark);
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+        }
+
+
+        .reason p {
+
+            color: var(--text);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta-section {
+
+            background: var(--primary);
+
+            padding: 75px 0;
+
+            color: #fff;
+        }
+
+
+        .cta-inner {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+
+        .cta-content span {
+
+            color: #d8bd98;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+        }
+
+
+        .cta-content h2 {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 40px;
+
+            font-weight: 400;
+
+            margin-top: 8px;
+        }
+
+
+        .cta-content p {
+
+            color: rgba(255,255,255,.8);
+
+            margin-top: 8px;
+        }
+
+
+        .cta-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: #fff;
+
+            color: var(--primary);
+
+            padding: 14px 28px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+        }
+
+
+        .cta-btn:hover {
+
+            background: #eee;
+
+            color: var(--primary-dark);
+        }
+
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            background: #252223;
+
+            color: rgba(255,255,255,.72);
+
+            padding-top: 70px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+            padding-bottom: 55px;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-logo img {
+
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: contain;
+        }
+
+
+        .footer-logo span {
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            color: #fff;
+
+            font-size: 21px;
+        }
+
+
+        .footer-about p {
+
+            max-width: 340px;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .footer-column h3 {
+
+            color: #fff;
+
+            font-family:
+                "DM Serif Display",
+                serif;
+
+            font-size: 21px;
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-column p {
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-column p i {
+
+            color: #b9a276;
+
+            width: 22px;
+        }
+
+
+        .footer-links li {
+
+            margin-bottom: 9px;
+        }
+
+
+        .footer-links a {
+
+            color: rgba(255,255,255,.68);
+
+            font-size: 13px;
+        }
+
+
+        .footer-links a:hover {
+
+            color: #fff;
+
+            padding-left: 5px;
+        }
+
+
+        .footer-social {
+
+            display: flex;
+
+            gap: 8px;
+
+            margin-top: 20px;
+        }
+
+
+        .footer-social a {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            color: #fff;
+        }
+
+
+        .footer-social a:hover {
+
+            background: var(--primary);
+
+            border-color: var(--primary);
+        }
+
+
+        .copyright {
+
+            border-top:
+                1px solid rgba(255,255,255,.1);
+
+            padding: 20px 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            font-size: 12px;
+        }
+
+
+        .copyright a {
+
+            color: #fff;
+        }
+
+
+
+        /* =========================================================
+           SCROLL TOP
+        ========================================================= */
+
+        .scroll-top {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: #fff;
+
+            z-index: 999;
+
+            cursor: pointer;
+        }
+
+
+        .scroll-top.show {
+
+            display: flex;
+        }
+
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .navigation {
+                gap: 17px;
+            }
+
+            .navigation a {
+                font-size: 11px;
+            }
+
+            .header-actions {
+                margin-left: 8px;
+            }
+
+        }
+
+
+        @media (max-width: 992px) {
+
+            .navigation {
+
+                position: fixed;
+
+                top: 85px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #fff;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 25px 5%;
+
+                gap: 18px;
+
+                box-shadow:
+                    0 12px 25px rgba(0,0,0,.08);
+            }
+
+
+            .navigation.show {
+                display: flex;
+            }
+
+
+            .mobile-toggle {
+                display: block;
+            }
+
+
+            .about-grid,
+            .story-grid,
+            .why-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .about-image,
+            .story-image,
+            .why-image {
+
+                max-width: 750px;
+            }
+
+
+            .values-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .cta-inner {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .header,
+            .header-inner {
+
+                height: 75px;
+            }
+
+
+            .navigation {
+
+                top: 75px;
+            }
+
+
+            .page-hero {
+
+                margin-top: 75px;
+
+                height: 430px;
+            }
+
+
+            .header-social {
+
+                width: 34px;
+
+                height: 34px;
+            }
+
+
+            .logo-area img {
+
+                width: 45px;
+
+                height: 45px;
+            }
+
+
+            .company-name {
+
+                font-size: 18px;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 36px;
+            }
+
+
+            .about-content h2 {
+
+                font-size: 38px;
+            }
+
+
+            .story-content h2 {
+
+                font-size: 36px;
+            }
+
+
+            .vision-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .stat-item {
+
+                border-bottom:
+                    1px solid rgba(255,255,255,.15);
+            }
+
+
+            .stat-item:nth-child(2) {
+
+                border-right: none;
+            }
+
+
+            .stat-item:nth-child(3),
+            .stat-item:nth-child(4) {
+
+                border-bottom: none;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .copyright {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+
+                width: 92%;
+            }
+
+
+            .company-name {
+
+                font-size: 16px;
+            }
+
+
+            .header-actions {
+
+                gap: 5px;
+            }
+
+
+            .header-social {
+
+                width: 32px;
+
+                height: 32px;
+            }
+
+
+            .page-hero {
+
+                height: 400px;
+            }
+
+
+            .page-hero h1 {
+
+                font-size: 43px;
+            }
+
+
+            .page-hero p {
+
+                font-size: 13px;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 31px;
+            }
+
+
+            .about-image {
+
+                height: 390px;
+            }
+
+
+            .experience-box {
+
+                right: 0;
+
+                bottom: 40px;
+
+                min-width: 145px;
+
+                padding: 20px;
+            }
+
+
+            .experience-box strong {
+
+                font-size: 35px;
+            }
+
+
+            .about-content h2 {
+
+                font-size: 34px;
+            }
+
+
+            .about-checks {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .story-image {
+
+                height: 380px;
+            }
+
+
+            .vision-card {
+
+                padding: 35px 28px;
+
+                min-height: 300px;
+            }
+
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .stat-item,
+            .stat-item:nth-child(2),
+            .stat-item:nth-child(3) {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid rgba(255,255,255,.15);
+            }
+
+
+            .stat-item:last-child {
+
+                border-bottom: none;
+            }
+
+
+            .why-image {
+
+                height: 390px;
+            }
+
+
+            .why-content h2 {
+
+                font-size: 34px;
+            }
+
+
+            .cta-content h2 {
+
+                font-size: 31px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header-inner">
+
+
+                <!-- Logo -->
+
+                <a href="about.html"
+                   class="logo-area">
+
+                    <img src="img/logo.png"
+                         alt="GEO HOMES LIMITED">
+
+                    <span class="company-name">
+                        GEO HOMES LIMITED
+                    </span>
+
+                </a>
+
+
+                <!-- Navigation -->
+
+                <nav class="navigation"
+                     id="navigation">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html"
+                       class="active">
+                        About
+                    </a>
+
+                    <a href="for-sale.html">
+                        Ongoing
+                    </a>
+
+                    <a href="handed_over.html">
+                        Handed Over
+                    </a>
+
+                    <a href="upcoming.html">
+                        Upcoming
+                    </a>
+
+                    <a href="land_needed.html">
+                        Land Needed
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <!-- Social -->
+
+                <div class="header-actions">
+
+
+                    <a href="#"
+                       class="header-social facebook-icon"
+                       target="_blank"
+                       aria-label="Facebook">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/8801711275021"
+                       class="header-social whatsapp-icon"
+                       target="_blank"
+                       aria-label="WhatsApp">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <div class="mobile-toggle"
+                         id="mobileToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         PAGE HERO
+    ========================================================= -->
+
+    <section class="page-hero">
+
+
+        <div class="container">
+
+            <div class="page-hero-content">
+
+                <div class="page-hero-small">
+                    Discover Geo Home
+                </div>
+
+                <h1>
+                    About Us
+                </h1>
+
+                <p>
+                    Creating thoughtfully planned residential spaces
+                    designed around modern lifestyles, comfort and
+                    long-term value.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="breadcrumb">
+
+            <div class="container">
+
+                <div class="breadcrumb-inner">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <span>
+                        About Us
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ABOUT INTRODUCTION
+    ========================================================= -->
+
+    <section class="about-intro padding">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image-wrap">
+
+                    <img src="img/about.jpeg"
+                         alt="Geo Homes Limited"
+                         class="about-image">
+
+                    <div class="experience-box">
+                        <strong>2007</strong>
+                        <span>Established</span>
+                    </div>
+
+                </div>
+
+                <div class="about-content">
+
+                    <span class="eyebrow">
+                        About Geo Homes Limited
+                    </span>
+
+                    <h2>
+                        Building a Legacy of
+                        <em>Real Estate & Construction Development</em>
+                    </h2>
+
+                    <p>
+                        <strong>Geo Homes Limited</strong> is a real estate
+                        development company based in Dhaka, Bangladesh.
+                        The company was previously known as
+                        <strong>Geo Properties Limited</strong> and started
+                        its operations in <strong>2007</strong>.
+                    </p>
+
+                    <p>
+                        Since its establishment, Geo Homes Limited has
+                        developed and handed over <strong>18 projects</strong>
+                        in different parts of Dhaka. The company's completed
+                        project locations include Uttara, Azimpur, Eskaton,
+                        Kalabagan, Hatirpool, Mohammadpur, Rampura, and
+                        Dhanmondi.
+                    </p>
+
+                    <p>
+                        Today, the company has project and development
+                        activities in locations including
+                        <strong>Bashundhara, Jolshiri, Mohammadpur,
+                        Kalabagan, and Eskaton.</strong>
+                    </p>
+
+                    <div class="about-checks">
+
+                        <div class="check-item">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Established in 2007</span>
+                        </div>
+
+                        <div class="check-item">
+                            <i class="fa-solid fa-building"></i>
+                            <span>18 Projects Handed Over</span>
+                        </div>
+
+                        <div class="check-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Dhaka Project Locations</span>
+                        </div>
+
+                        <div class="check-item">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Continuing Development</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         OUR JOURNEY
+    ========================================================= -->
+
+    <section class="story-section padding">
+
+        <div class="container">
+
+            <div class="story-grid">
+
+                <div class="story-content">
+
+                    <span class="eyebrow">
+                        Our Journey
+                    </span>
+
+                    <h2>
+                        Growing Through
+                        <em>Experience & Development</em>
+                    </h2>
+
+                    <p>
+                        <strong>2007 — Beginning of Our Journey</strong><br>
+                        Geo Homes Limited began its journey in the real estate
+                        sector in 2007.
+                    </p>
+
+                    <p>
+                        <strong>Project Development</strong><br>
+                        Over the years, the company developed residential
+                        projects in multiple locations across Dhaka.
+                    </p>
+
+                    <p>
+                        <strong>18 Projects Handed Over</strong><br>
+                        The company has successfully handed over
+                        <strong>15 projects</strong>, establishing a portfolio
+                        across several prominent areas of the city.
+                    </p>
+
+                    <p>
+                        <strong>Continuing Development</strong><br>
+                        Geo Homes Limited continues its project activities in
+                        locations including Bashundhara, Jolshiri, Mohammadpur,
+                        Kalabagan, and Eskaton.
+                    </p>
+
+                </div>
+
+                <div class="story-image">
+
+                    <img src="img/about.jpeg"
+                         alt="Geo Homes Limited Project">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         OUR LEADERSHIP
+    ========================================================= -->
+
+    <section class="vision-section padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Our Leadership
+                </span>
+
+                <h2>
+                    Leadership Team
+                </h2>
+
+                <p>
+                    The leadership team of Geo Homes Limited provides
+                    direction and contributes to the company's management
+                    and continued development.
+                </p>
+
+            </div>
+
+            <div class="vision-grid">
+
+                <div class="vision-card">
+
+                    <div class="vision-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>
+                        Ferdous Zaman
+                    </h3>
+
+                    <p>
+                        <strong>Chairman</strong><br><br>
+                        The Chairman provides strategic leadership and
+                        direction for the company's continued development.
+                    </p>
+
+                </div>
+
+                <div class="vision-card mission">
+
+                    <div class="vision-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>
+                        Shahabddin Laskar
+                    </h3>
+
+                    <p>
+                        <strong>Managing Director</strong><br><br>
+                        The Managing Director leads the company's management
+                        and operational activities.
+                    </p>
+
+                </div>
+
+                <div class="vision-card">
+
+                    <div class="vision-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>
+                        Iffat Ara
+                    </h3>
+
+                    <p>
+                        <strong>Director</strong><br><br>
+                        Director responsible for contributing to the company's
+                        management and development.
+                    </p>
+
+                </div>
+
+                <div class="vision-card mission">
+
+                    <div class="vision-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3>
+                        Md. Monzur Aziz
+                    </h3>
+
+                    <p>
+                        <strong>Director</strong><br><br>
+                        Director contributing to the company's overall
+                        management and development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         OUR PROJECT PORTFOLIO
+    ========================================================= -->
+
+    <section class="values-section padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    Our Project Portfolio
+                </span>
+
+                <h2>
+                    18 Projects Handed Over
+                </h2>
+
+                <p>
+                    Geo Homes Limited has handed over 18 projects across
+                    a number of established Dhaka locations.
+                </p>
+
+            </div>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Uttara</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Azimpur</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Eskaton</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Kalabagan</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Hatirpool</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Mohammadpur</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Rampura</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3>Lake Circus</h3>
+                    <p>Completed project location.</p>
+                </div>
+
+            </div>
+
+            <div class="section-heading" style="margin-top:55px;margin-bottom:0;">
+
+                <span>
+                    Ongoing & Upcoming Locations
+                </span>
+
+                <p>
+                    The company's ongoing and upcoming project locations
+                    include <strong>Bashundhara, Jolshiri, Mohammadpur,
+                    Kalabagan, and Eskaton.</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         PROJECT SUMMARY
+    ========================================================= -->
+
+    <section class="stats-section padding">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat-item">
+                    <div class="stat-number">2007</div>
+                    <div class="stat-title">Established</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number">18</div>
+                    <div class="stat-title">Projects Handed Over</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number">08</div>
+                    <div class="stat-title">Completed Locations</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-number">05</div>
+                    <div class="stat-title">Current Locations</div>
+                </div>
+
+            </div>
+
+            <p class="stats-note">
+                Geo Homes Limited continues its property development
+                activities across selected locations in Dhaka.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         OUR COMMITMENT
+    ========================================================= -->
+
+    <section class="why-section padding">
+
+        <div class="container">
+
+            <div class="why-grid">
+
+                <div class="why-image">
+
+                    <img src="img/about.jpeg"
+                         alt="Geo Homes Limited Property">
+
+                    <div class="why-image-badge">
+                        Our Commitment
+                    </div>
+
+                </div>
+
+                <div class="why-content">
+
+                    <span class="eyebrow">
+                        Our Commitment
+                    </span>
+
+                    <h2>
+                        Experience,
+                        <em>Development & Value</em>
+                    </h2>
+
+                    <p>
+                        At Geo Homes Limited, our continued journey in
+                        property development is supported by years of
+                        experience, a growing project portfolio, and an
+                        established presence across Dhaka.
+                    </p>
+
+                    <div class="reason-list">
+
+                        <div class="reason">
+                            <div class="reason-number">01</div>
+                            <div>
+                                <h4>Years of Experience</h4>
+                                <p>
+                                    Our journey in the real estate sector
+                                    began in 2007.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="reason">
+                            <div class="reason-number">02</div>
+                            <div>
+                                <h4>Established Project Portfolio</h4>
+                                <p>
+                                    We have developed and handed over
+                                    18 projects across Dhaka.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="reason">
+                            <div class="reason-number">03</div>
+                            <div>
+                                <h4>Well-Positioned Locations</h4>
+                                <p>
+                                    Our project activities cover selected
+                                    and established locations in Dhaka.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="reason">
+                            <div class="reason-number">04</div>
+                            <div>
+                                <h4>Long-Term Value</h4>
+                                <p>
+                                    We continue to develop projects with a
+                                    focus on well-positioned locations and
+                                    long-term value for our customers and
+                                    stakeholders.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================================================
+         CTA
+    ========================================================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-inner">
+
+
+                <div class="cta-content">
+
+                    <span>
+                        Discover Your Next Property
+                    </span>
+
+                    <h2>
+                        Find a Place You'll Love to Call Home
+                    </h2>
+
+                    <p>
+                        Explore our available residential projects
+                        and discover your future home.
+                    </p>
+
+                </div>
+
+
+                <a href="index.html#projects"
+                   class="cta-btn">
+
+                    View Projects
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+      <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- Company -->
+
+                <div class="footer-about">
+
+                    <div class="footer-logo">
+
+                        <img src="img/logo.png"
+                             alt="GEO HOME LTD">
+
+                        <span>
+                            GEO HOME LTD
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Geo Homes Limited is a real estate development
+                        company with a growing portfolio of residential
+                        projects across Dhaka.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a href="#"
+                           target="_blank"
+                           aria-label="Facebook">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="https://wa.me/8801711275021"
+                           target="_blank"
+                           aria-label="WhatsApp">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="LinkedIn">
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        14/6, Lake Circus, Kalabagan, Dhaka-1205
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +880 1711-275021
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        info@geohome.com
+                    </p>
+
+                </div>
+
+
+
+                <!-- Useful Pages -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Useful Pages
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="for-sale.html">
+                                Projects for Sale
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="handed_over.html">
+                                Handed Over
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="upcoming.html">
+                                Upcoming Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Services -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Our Services
+                    </h3>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#services">
+                                Real Estate
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Construction
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Property Solution
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Architectural Design
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#services">
+                                Property Consultancy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="copyright">
+
+                <div>
+                    © 2026 GEO HOME LTD. All Rights Reserved.
+                </div>
+
+                <div>
+                    Designed & Developed by
+                    <a href="https://safetaka.com"
+                       target="_blank">
+                        Safetaka.com
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- =========================================================
+         SCROLL TOP
+    ========================================================= -->
+
+    <div class="scroll-top"
+         id="scrollTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        const mobileToggle =
+            document.getElementById("mobileToggle");
+
+        const navigation =
+            document.getElementById("navigation");
+
+
+        mobileToggle.addEventListener(
+            "click",
+            function () {
+
+                navigation.classList.toggle("show");
+
+
+                const icon =
+                    mobileToggle.querySelector("i");
+
+
+                if (
+                    navigation.classList.contains("show")
+                ) {
+
+                    icon.classList.remove(
+                        "fa-bars"
+                    );
+
+                    icon.classList.add(
+                        "fa-xmark"
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           CLOSE MOBILE MENU
+        ===================================================== */
+
+        document
+            .querySelectorAll(".navigation a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navigation.classList.remove(
+                            "show"
+                        );
+
+
+                        const icon =
+                            mobileToggle.querySelector("i");
+
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =====================================================
+           SCROLL TOP
+        ===================================================== */
+
+        const scrollTop =
+            document.getElementById("scrollTop");
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 500) {
+
+                    scrollTop.classList.add(
+                        "show"
+                    );
+
+                } else {
+
+                    scrollTop.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+        scrollTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
